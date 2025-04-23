@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myself</title>
+</head>
+<body>
+    <header id="theHead"></header> 
+    <script>
+        let links = document.createElement("nav")
+        links.className = "nav-links"
+        links.innerHTML = '<ul><li><a href="#Home">Home</a></li><li><a href="#Terms">Terms</a></li><li><a href="#Services">Services</a></li></ul>'
+        let firstUl = links.querySelector("ul")
+        firstUl.className = "nav-list"
+        document.body.appendChild(links)
+
+        let me = document.getElementById("theHead")
+        me.innerHTML = '<div><h1>Who am I?</h1><p>My name is Adegbite Ikeoluwa</p><p>I am a web2 developer in the making!</p></div>'
+        document.body.appendChild(me) 
+        // I appended again so that the me content can come after the nav link contents although I could have just created the whole header with Javascript but I wanted to practice getElementbyId.
+
+        let bodyText = document.createElement("section")
+        bodyText.innerHTML = '<div><h2>Hobbies</h2><ul><li>Singing</li><li>Eating</li><li>Watching movies</li><li>Sleeping</li></ul></div>'
+        document.body.appendChild(bodyText)
+    </script>
+</body>
+</html>
