@@ -1,18 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Myself</title>
+  <style>
+      .nav-links {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+      }
+  
+      .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+  
+      .nav-list li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+  
+      /* Header section */
+      #theHead {
+        background-color: #8b8484;
+        padding: 20px;
+        text-align: center;
+      }
+  
+      #theHead h1 {
+        margin-bottom: 10px;
+        font-size: 2rem;
+        color: #333;
+      }
+  
+      #theHead p {
+        margin: 5px 0;
+        color: #333;
+      }
+  
+      /* section (hobbies) */
+      body > div {
+        padding: 20px;
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #8b8484;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+  
+      body > div h2 {
+        text-align: center;
+        color: #333;
+      }
+  
+      body > div ul {
+        list-style: square inside;
+        padding: 0;
+      }
+  
+      body > div ul li {
+        margin: 8px 0;
+        font-size: 1.1rem;
+        color: #333;
+      }
+    </style>
+</head>
+<body>
+  <header id="theHead"></header>
+  <script>
+    let links = document.createElement("nav")
+    links.className = "nav-links"
+    links.innerHTML = `<ul><li><a href="#Home">Home</a></li><li><a href="#Terms">Terms</a></li><li><a href="#Services">Services</a></li></ul>`
+    let firstUl = links.querySelector("ul")
+    firstUl.className = "nav-list"
+    document.body.appendChild(links)
+
+    let me = document.getElementById("theHead")
+    me.innerHTML = `<div><h1>Who am I?</h1><p>My name is Adegbite Ikeoluwa</p><p>I am a web2 developer in the making!</p></div>`
+     document.body.appendChild(me)
+
+    let bodyText = document.createElement("div")
+    bodyText.innerHTML = `<div><h2>Hobbies</h2><ul><li>Singing</li><li>Eating</li><li>Watching movies</li><li>Sleeping</li></ul></div>`
+    let bodyTextName = bodyText.querySelector("div")
+    let bodylist = bodyText.querySelector("ul")
+    bodyTextName.className = "hob-list"
+    document.body.appendChild(bodyText);
+  </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myself</title>
 </head>
-<body>
-    <header id="theHead"></header> 
+<body style="text-decoration: black;">
+    <header id="theHead" style="background-color: bisque; text-decoration: black;"></header> 
     <script>
         let links = document.createElement("nav")
         links.className = "nav-links"
         links.innerHTML = '<ul><li><a href="#Home">Home</a></li><li><a href="#Terms">Terms</a></li><li><a href="#Services">Services</a></li></ul>'
         let firstUl = links.querySelector("ul")
         firstUl.className = "nav-list"
+        links.style.backgroundColor = "lime";
+        links.style.padding = "10px";
+        links.style.textAlign = "center";
+        firstUl.style.textDecoration = "none"
+        firstUl.style.display = "flex";
+        firstUl.style.justifyContent = "center";
+        firstUl.style.gap = "20px";
+        firstUl.style.listStyle = "none"
         document.body.appendChild(links)
 
         let me = document.getElementById("theHead")
@@ -22,7 +127,14 @@
 
         let bodyText = document.createElement("section")
         bodyText.innerHTML = '<div><h2>Hobbies</h2><ul><li>Singing</li><li>Eating</li><li>Watching movies</li><li>Sleeping</li></ul></div>'
+        let bodyTextName = bodyText.querySelector("div")
+        let bodylist = bodyText.querySelector("ul")
+        bodyTextName.className = "hob-list"
+        bodyTextName.style.backgroundColor = "indigo"
+        bodyTextName.style.textAlign = "center"
+        bodylist.style.listStyle ="none"
         document.body.appendChild(bodyText)
     </script>
 </body>
-</html>
+</html> -->
+  
